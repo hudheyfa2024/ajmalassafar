@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!--=============== BOXICONS ===============-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css">
+
+    <title>AJMAL AS SAFAR|PERFUME</title>
+</head>
+<body>
+     <!--==================== HEADER ====================-->
+     <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo"> <img src="img/logo (2).png" alt="" width="80px">   </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link">Maison</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#featured" class="nav__link">Qui sommes-nous ?</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">Nos produits</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class='bx bx-x' ></i>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <!-- Add this form somewhere in your HTML -->
+    <div id="orderForm" class="order-form" style="display: none;">
+        <form id="orderFormElement">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Submit</button>
+            <button type="button" onclick="closeForm()">Cancel</button>
+        </form>
+    </div>
+
+    <!--==================== MY ORDERS ====================-->
+    <section class="products section container" >
+        <h2 class="section__title">
+            Ma commande
+        </h2>
+
+        <div class="products__container grid" id="myOrders"></div>
+        <div class="total_price">
+            <p >PRIX TOTAL : <span id="total">9</span></p>
+        </div>
+        <button class="ok_button">acheter</button>
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@latest/dist/email.min.js"></script>
+<script src="myOrders.js"></script>
+
+</html>
